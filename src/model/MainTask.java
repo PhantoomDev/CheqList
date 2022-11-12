@@ -22,26 +22,36 @@ public class MainTask extends Task {
         return this.numOfTask;
     }
 
-    
-    public void updateMainIsDone() {
-
+    public void updateTasksDone() {
+        int ctr = 0;
+        for (Task task : subTasks) {
+            if(task.getIsDone()) {
+                ctr++;
+            }
+        }
+        this.tasksDone = ctr;
     }
+    
+    public void updateIsDone() {
+        if(numOfTask <= 0) {
 
+        }
+        else {
+            if(tasksDone < numOfTask) {
+                this.setIsDone(true);
+            }
+            else {
+                this.setIsDone(false);
+            }
+        }
+    }
     @Override
     public void setIsDone(boolean isDone) {
-        for(int i = 0; i < this.subTasks.size(); i++) {
-            this.subTasks.get(i).setIsDone(true);
+        for (Task task : subTasks) {
+            task.setIsDone(isDone);
         }
-        updateMainIsDone();
-    }
-    @Override
-    public boolean getIsDone() {
-        if (numOfTask == 0) {
-            return this.getIsDone();
-        }
-        else { // todo getIdDone logic when number of task != 0
-            return false;
-        }
+        updateTasksDone();
+        updateIsDone();
     }
     
 }
