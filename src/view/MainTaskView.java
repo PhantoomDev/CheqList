@@ -9,7 +9,7 @@ import javax.swing.*;
 
 public class MainTaskView extends JPanel{
 
-    private JToggleButton checkButton = new JToggleButton();
+    private JToggleButton doneButton = new JToggleButton();
     private JToggleButton importanceButton = new JToggleButton();
     private JTextField taskTextField = new JTextField();
     private JTextField dueYear = new JTextField();
@@ -17,7 +17,7 @@ public class MainTaskView extends JPanel{
     private JTextField dueDate = new JTextField();
 
     MainTaskView() {
-        this.add(checkButton);
+        this.add(doneButton);
         this.add(importanceButton);
         this.add(taskTextField);
         this.add(dueYear);
@@ -26,7 +26,7 @@ public class MainTaskView extends JPanel{
     }
 
     public boolean getIsdone() {
-        return checkButton.isSelected();
+        return doneButton.isSelected();
     }
 
     public boolean getImportance() {
@@ -50,12 +50,13 @@ public class MainTaskView extends JPanel{
         return d;
     }
 
-    
-    void addCheckButtonListener(ActionListener listenForCheckButton) {
-        checkButton.addActionListener(listenForCheckButton);
+
+    void addDoneListener(ActionListener listenForDoneButton) {
+        this.doneButton.addActionListener(listenForDoneButton);
+        // boolean isSelected = this.doneButton.getModel().isSelected();
     }
 
-    void addImportanceButtonListener(ActionListener listenForImportanceButton) {
+    void addImportanceListener(ActionListener listenForImportanceButton) {
         importanceButton.addActionListener(listenForImportanceButton);
     }
 
