@@ -50,4 +50,13 @@ public class MainTaskView extends JPanel{
         return d;
     }
 
+    
+    void addCheckButtonListener(ActionListener listenForCheckButton) {
+        checkButton.addActionListener(listenForCheckButton);
+    }
+
+    void addImportanceButtonListener(ActionListener listenForImportanceButton) {
+        importanceButton.addActionListener(listenForImportanceButton);
+    }
+
 }
