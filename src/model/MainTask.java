@@ -2,11 +2,14 @@ package model;
 
 import java.util.ArrayList;
 
+/**
+ * MainTask, contains SubTasks as ArrayList
+ */
 public class MainTask extends Task {
 
     private ArrayList<Task> subTasks;
     private int numOfTask;
-    private int tasksDone;
+    private int numOfTaskDone;
 
     public void addSubTask(Task subTask) {
         this.subTasks.add(subTask);
@@ -22,22 +25,22 @@ public class MainTask extends Task {
         return this.numOfTask;
     }
 
-    public void updateTasksDone() {
+    public void updateNumOfTaskDone() {
         int ctr = 0;
         for (Task task : subTasks) {
             if(task.getIsDone()) {
                 ctr++;
             }
         }
-        this.tasksDone = ctr;
+        this.numOfTaskDone = ctr;
     }
     
     public void updateIsDone() {
-        if(numOfTask <= 0) {
+        if(this.numOfTask <= 0) {
 
         }
         else {
-            if(tasksDone < numOfTask) {
+            if(this.numOfTaskDone < this.numOfTask) {
                 this.setIsDone(true);
             }
             else {
@@ -50,7 +53,7 @@ public class MainTask extends Task {
         for (Task task : subTasks) {
             task.setIsDone(isDone);
         }
-        updateTasksDone();
+        updateNumOfTaskDone();
         updateIsDone();
     }
     

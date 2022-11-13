@@ -1,18 +1,22 @@
 package model;
 
 import java.util.*;
+
+/**
+ * base class to extend to SubTask and MainTask 
+ */
 public class Task {
     
-    private String name;
+    private String taskName;
     private boolean isDone;
     private Date dueDate;
     private boolean isImportant;
 
-    public void setName(String name) {
-        this.name = name;
+    public void setTaskName(String taskName) {
+        this.taskName = taskName;
     }
-    public String getName() {
-        return this.name;
+    public String getTaskName() {
+        return this.taskName;
     }
 
     public void setIsDone(boolean isDone) {
@@ -29,7 +33,7 @@ public class Task {
         return this.dueDate;
     }
 
-    public void setImportance(boolean importance) {
+    public void setIsImportant(boolean importance) {
         this.isImportant = importance;
     }
     public boolean getImportance() {

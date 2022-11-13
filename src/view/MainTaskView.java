@@ -40,14 +40,13 @@ public class MainTaskView extends JPanel{
     public Date getDuDate() {
         // TODO exception for not putting date value
         String dateStr = dueYear.getText()+"-"+dueMonth.getText()+"-"+ dueDate.getText();
-        Date d = new Date();
+        Date dueDate = new Date();
         try {
-            d = new SimpleDateFormat("yyyy-mm-dd").parse(dateStr);
+            dueDate = new SimpleDateFormat("yyyy-mm-dd").parse(dateStr);
         } catch (ParseException e) {
-            System.out.println("Exxception occured"+e);
+            System.out.println("Exception occurred"+e);
         }
-        // DateFormat.getDateInstance().parse();
-        return d;
+        return dueDate;
     }
 
 
