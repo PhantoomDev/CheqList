@@ -51,7 +51,7 @@ public class MainTaskView extends JPanel{
     }
 
 
-    void addDoneListener(ActionListener listenForDoneButton) {
+    public void addDoneListener(ActionListener listenForDoneButton) {
         this.doneButton.addActionListener(listenForDoneButton);
         boolean isSelected = this.doneButton.getModel().isSelected();
         System.out.println(isSelected);
