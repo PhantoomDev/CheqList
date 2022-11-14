@@ -4,7 +4,6 @@ import model.MainTask;
 import view.MainTaskView;
 import java.awt.event.ActionListener;
 
-import javax.print.attribute.SetOfIntegerSyntax;
 import javax.swing.JFrame;
 
 import java.awt.event.ActionEvent;
@@ -30,6 +29,7 @@ public class MainTaskController {
 
         // ! for testing
         this.theFrame.add(theView);
+        this.theFrame.setVisible(true);
     }
 
     class DoneListener implements ActionListener {

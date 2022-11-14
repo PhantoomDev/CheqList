@@ -1,7 +1,5 @@
 package tests;
 
-import javax.swing.JFrame;
-
 import controller.MainTaskController;
 import model.MainTask;
 import view.MainTaskView;
@@ -14,9 +12,8 @@ import view.MainTaskView;
 public class MVCTest {
     public static void main(String[] args) {
         MainTaskView theView = new MainTaskView();
-        MainTask themodel = new MainTask();
-        MainTaskController theController = new MainTaskController(theView, themodel);
+        MainTask theModel = new MainTask();
+        MainTaskController theController = new MainTaskController(theView, theModel);
 
-        theView.setVisible(true);
     }
 }
