@@ -16,7 +16,7 @@ public class MainTaskView extends JPanel{
     private JTextField dueMonth = new JTextField();
     private JTextField dueDate = new JTextField();
 
-    MainTaskView() {
+    public MainTaskView() {
         this.add(doneButton);
         this.add(importanceButton);
         this.add(taskTextField);
