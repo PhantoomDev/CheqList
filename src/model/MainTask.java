@@ -11,6 +11,12 @@ public class MainTask extends Task {
     private int numOfTask;
     private int numOfTaskDone;
 
+    public MainTask() {
+        this.subTasks = new ArrayList<Task>();
+        this.numOfTask = 0;
+        this.numOfTaskDone = 0;
+    }
+
     public void addSubTask(Task subTask) {
         this.subTasks.add(subTask);
     }
@@ -46,11 +52,19 @@ public class MainTask extends Task {
     }
     @Override
     public void setIsDone(boolean isDone) {
-        for (Task task : subTasks) {
-            task.setIsDone(isDone);
+        System.out.println("Entered setIsDone()");
+        if (subTasks.size() == 0) {
+            this.isDone = isDone;
+            System.out.println("Is done");
         }
-        updateNumOfTaskDone();
-        updateIsDone();
+        else {
+            for (Task task : subTasks) {
+                task.setIsDone(isDone);
+            }
+            updateNumOfTaskDone();
+            updateIsDone();
+        }
+        
     }
     
 }

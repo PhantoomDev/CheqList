@@ -7,10 +7,10 @@ import java.util.*;
  */
 public class Task {
     
-    private String taskName;
-    private boolean isDone;
-    private Date dueDate;
-    private boolean isImportant;
+    protected String taskName;
+    protected boolean isDone;
+    protected Date dueDate;
+    protected boolean isImportant;
 
     public void setTaskName(String taskName) {
         this.taskName = taskName;

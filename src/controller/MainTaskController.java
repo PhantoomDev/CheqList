@@ -13,7 +13,7 @@ public class MainTaskController {
     // ! this is a test frame for individual testing, remove later
     private JFrame theFrame;
     private MainTaskView theView;
-    private MainTask theModel;
+    private MainTask theModel = new MainTask();
 
     public MainTaskController(MainTaskView theView, MainTask theModel) {
         
