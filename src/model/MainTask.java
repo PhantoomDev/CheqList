@@ -40,12 +40,8 @@ public class MainTask extends Task {
 
         }
         else {
-            if(this.numOfTaskDone < this.numOfTask) {
-                this.setIsDone(true);
-            }
-            else {
-                this.setIsDone(false);
-            }
+            boolean isDone = (this.numOfTaskDone < this.numOfTask) ? true : false;
+            this.setIsDone(true); 
         }
     }
     @Override

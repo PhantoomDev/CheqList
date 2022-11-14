@@ -3,19 +3,33 @@ package controller;
 import model.MainTask;
 import view.MainTaskView;
 import java.awt.event.ActionListener;
+
+import javax.print.attribute.SetOfIntegerSyntax;
+import javax.swing.JFrame;
+
 import java.awt.event.ActionEvent;
 
 public class MainTaskController {
     
+    // ! this is a test frame for individual testing, remove later
+    private JFrame theFrame;
     private MainTaskView theView;
     private MainTask theModel;
 
     public MainTaskController(MainTaskView theView, MainTask theModel) {
         
+        // ! for testing
+        this.theFrame = new JFrame(); 
+        this.theFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.theFrame.setSize(600, 200);
+
         this.theView = theView;
         this.theModel = theModel;
 
         this.theView.addDoneListener(new DoneListener());
+
+        // ! for testing
+        this.theFrame.add(theView);
     }
 
     class DoneListener implements ActionListener {

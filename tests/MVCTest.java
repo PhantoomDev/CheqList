@@ -1,5 +1,7 @@
 package tests;
 
+import javax.swing.JFrame;
+
 import controller.MainTaskController;
 import model.MainTask;
 import view.MainTaskView;
