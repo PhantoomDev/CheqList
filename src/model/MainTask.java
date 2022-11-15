@@ -46,8 +46,12 @@ public class MainTask extends Task {
 
         }
         else {
-            boolean isDone = (this.numOfTaskDone < this.numOfTask) ? true : false;
-            this.setIsDone(isDone); 
+            if(this.numOfTaskDone < this.numOfTask) {
+                this.setIsDone(true);
+            }
+            else {
+                this.setIsDone(false);
+            }
         }
     }
     @Override
