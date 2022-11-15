@@ -20,7 +20,7 @@ public class MainTaskController {
         // ! for testing
         this.theFrame = new JFrame(); 
         this.theFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.theFrame.setSize(600, 200);
+        this.theFrame.setSize(500, 500);
 
         this.theView = theView;
         this.theModel = theModel;

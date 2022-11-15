@@ -1,6 +1,8 @@
 package view;
 
 import java.awt.event.ActionListener;
+import java.awt.Color;
+import java.awt.FlowLayout;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -11,12 +13,15 @@ public class MainTaskView extends JPanel{
 
     private JToggleButton doneButton = new JToggleButton();
     private JToggleButton importanceButton = new JToggleButton();
-    private JTextField taskTextField = new JTextField();
-    private JTextField dueYear = new JTextField();
-    private JTextField dueMonth = new JTextField();
-    private JTextField dueDate = new JTextField();
+    private JTextField taskTextField = new JTextField(10);
+    private JTextField dueYear = new JTextField(5);
+    private JTextField dueMonth = new JTextField(2);
+    private JTextField dueDate = new JTextField(2);
 
     public MainTaskView() {
+        this.setBackground(Color.lightGray);
+        this.setLayout(new FlowLayout());
+        this.doneButton.setSize(30,30); // TODO Toggle button size
         this.add(doneButton);
         this.add(importanceButton);
         this.add(taskTextField);

@@ -56,10 +56,9 @@ public class MainTask extends Task {
     }
     @Override
     public void setIsDone(boolean isDone) {
-        System.out.println("Entered setIsDone()");
         if (subTasks.size() == 0) {
             this.isDone = isDone;
-            System.out.println("Is done");
+            System.out.println(isDone);
         }
         else {
             for (Task task : subTasks) {
