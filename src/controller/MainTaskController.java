@@ -7,7 +7,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JFrame;
 
 import java.awt.event.ActionEvent;
-
+// TODO: check MVCTest.java. this requires overhaul
 public class MainTaskController {
     
     // ! this is a test frame for individual testing, remove later

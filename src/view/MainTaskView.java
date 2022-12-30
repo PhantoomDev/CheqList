@@ -8,7 +8,7 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 
 import javax.swing.*;
-
+// TODO: check MVCTest.java. this requires overhaul
 public class MainTaskView extends JPanel{
 
     private JToggleButton doneButton = new JToggleButton();

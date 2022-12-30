@@ -1,5 +1,11 @@
 package tests;
 
+import javafx application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+
 import controller.MainTaskController;
 import model.MainTask;
 import view.MainTaskView;
@@ -10,10 +16,10 @@ import view.MainTaskView;
  * TODO test MainTask class
  */
 public class MVCTest {
+
+    @Override
     public static void main(String[] args) {
-        MainTaskView theView = new MainTaskView();
-        MainTask theModel = new MainTask();
-        MainTaskController theController = new MainTaskController(theView, theModel);
+        Parent root = FXMLLoader.load(getClass().getResource("MainTaskView.fxml"));
 
     }
 }
