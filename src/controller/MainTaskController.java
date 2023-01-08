@@ -4,14 +4,16 @@ import model.MainTask;
 import view.MainTaskView;
 import java.awt.event.ActionListener;
 
-import javax.swing.JFrame;
+import javafx.scene.Scene;
+import javafx.scene.SubScene;
+import javafx.stage.Stage;
 
 import java.awt.event.ActionEvent;
-// TODO: check MVCTest.java. this requires overhaul
+// TODO: check Main.java. this requires overhaul
 public class MainTaskController {
     
     // ! this is a test frame for individual testing, remove later
-    private JFrame theFrame;
+    private Scene theScene;
     private MainTaskView theView;
     private MainTask theModel = new MainTask();
 
@@ -19,7 +21,6 @@ public class MainTaskController {
         
         // ! for testing
         this.theFrame = new JFrame(); 
-        this.theFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.theFrame.setSize(500, 500);
 
         this.theView = theView;

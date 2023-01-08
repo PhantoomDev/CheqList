@@ -1,42 +1,37 @@
 package view;
 
-import java.awt.event.ActionListener;
-import java.awt.Color;
-import java.awt.FlowLayout;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
-import javax.swing.*;
-// TODO: check MVCTest.java. this requires overhaul
-public class MainTaskView extends JPanel{
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.SubScene;
+import javafx.scene.chart.BubbleChart;
+import javafx.scene.control.Button;
+import javafx.scene.text.Text;
 
-    private JToggleButton doneButton = new JToggleButton();
-    private JToggleButton importanceButton = new JToggleButton();
-    private JTextField taskTextField = new JTextField(10);
-    private JTextField dueYear = new JTextField(5);
-    private JTextField dueMonth = new JTextField(2);
-    private JTextField dueDate = new JTextField(2);
+/**
+ * view that displays main task objects
+ */
+public class MainTaskView extends SubScene{
 
-    public MainTaskView() {
-        this.setBackground(Color.lightGray);
-        this.setLayout(new FlowLayout());
-        this.doneButton.setSize(30,30); // TODO Toggle button size
-        this.add(doneButton);
-        this.add(importanceButton);
-        this.add(taskTextField);
-        this.add(dueYear);
-        this.add(dueMonth);
-        this.add(dueDate);
+   
+
+    public MainTaskView(Parent arg0, double arg1, double arg2) {
+        super(arg0, arg1, arg2);
+        //TODO Auto-generated constructor stub
     }
 
-    public boolean getIsdone() {
-        return doneButton.isSelected();
-    }
-
-    public boolean getImportance() {
-        return importanceButton.isSelected();
-    }
+    // initialize main task related view e.g buttons, text fields
+    // TODO: change to JavaFX equivalent
+    private Button doneButton = new Button();
+    private Button importanceButton = new Button();
+    private Text taskTextField = new Text();
+    private Text dueYear = new Text();
+    private Text dueMonth = new Text();
+    private Text dueDate = new Text();
 
     public String getTaskString() {
         return taskTextField.getText();
@@ -52,16 +47,6 @@ public class MainTaskView extends JPanel{
             System.out.println("Exception occurred"+e);
         }
         return dueDate;
-    }
-
-
-    public void addDoneListener(ActionListener listenForDoneButton) {
-        this.doneButton.addActionListener(listenForDoneButton);
-        boolean isSelected = this.doneButton.getModel().isSelected();
-    }
-
-    void addImportanceListener(ActionListener listenForImportanceButton) {
-        importanceButton.addActionListener(listenForImportanceButton);
     }
 
 }
