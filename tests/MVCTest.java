@@ -15,11 +15,21 @@ import view.MainTaskView;
  * needed.
  * TODO test MainTask class
  */
-public class MVCTest {
+public class MVCTest extends Application {
+    // TODO: JavaFX runtime components are missing, and are required to run this application
+    // ! right now
+    public static void main(String[] args) {
+        launch(args);
+        
+    
+
+    }
 
     @Override
-    public static void main(String[] args) {
-        Parent root = FXMLLoader.load(getClass().getResource("MainTaskView.fxml"));
+    public void start(Stage stage) throws Exception {
+        
+        
 
+        stage.show();
     }
 }
