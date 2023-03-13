@@ -1,4 +1,4 @@
-# CheqList (in progress)
+# CheqList (Closed because apparently I found a good checklist now)
 I hate java
 
 ## What I learned:
